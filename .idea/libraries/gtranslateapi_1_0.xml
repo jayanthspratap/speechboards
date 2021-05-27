@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gtranslateapi-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../java-google-translate-text-to-speech/gtranslateapi-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

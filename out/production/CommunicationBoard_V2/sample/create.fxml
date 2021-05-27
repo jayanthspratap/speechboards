@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreateController">
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: &quot;lightgray&quot;;" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="0.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="0.0" text="⬅" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="upload" defaultButton="true" mnemonicParsing="false" onAction="#uploadButtonPushed" text="Upload an Image" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="export" contentDisplay="CENTER" defaultButton="true" maxHeight="0.0" mnemonicParsing="false" onAction="#exportButtonPushed" prefHeight="0.0" text="Export" textAlignment="CENTER" textFill="WHITE">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Create a New Board" textFill="#42a8d7">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Please ensure proper internet connection!" textFill="#42a8d7">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="87.0" prefWidth="179.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-background-color: #42a8d7;" text="1" textFill="WHITE">
+                           <padding>
+                              <Insets left="4.0" right="4.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Select languages below and click &quot;Create.&quot;">
+                           <HBox.margin>
+                              <Insets bottom="4.0" left="10.0" right="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-background-color: #42a8d7;" text="2" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="4.0" right="4.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Select up to 15 images and words to display.">
+                           <HBox.margin>
+                              <Insets bottom="4.0" left="10.0" right="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-background-color: #42a8d7;" text="3" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="4.0" right="4.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Export your board as a PDF when finished editing!">
+                           <HBox.margin>
+                              <Insets bottom="4.0" left="10.0" right="4.0" top="4.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="100.0" right="100.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="lang1" editable="true" promptText="Language 1" HBox.hgrow="ALWAYS" />
+                  <ComboBox fx:id="lang2" editable="true" promptText="Language 2" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="createBoard" defaultButton="true" maxHeight="0.0" mnemonicParsing="false" onAction="#createButtonPushed" text="Create" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="NEVER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Region prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: &quot;lightgray&quot;;" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="completeLabel" alignment="CENTER" contentDisplay="CENTER" text="Please complete language settings to continue!" textFill="GREY" visible="false">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+               </VBox.margin></Label>
+            <Label fx:id="progressLabel" alignment="CENTER" contentDisplay="CENTER" textFill="#42a8d7" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ProgressBar fx:id="progressBar" prefHeight="23.0" prefWidth="417.0" progress="0.0" style="-fx-background-color: #42a8d7;" visible="false">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin></ProgressBar>
+            <Button fx:id="cancelCreate" mnemonicParsing="false" text="Cancel" visible="false" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="image_grid" alignment="CENTER" visible="false" HBox.hgrow="ALWAYS">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="0.0" prefWidth="160.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <Accordion fx:id="dropdown" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

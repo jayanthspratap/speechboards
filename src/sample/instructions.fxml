@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxWidth="600.0" prefHeight="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InstructionsController">
+   <top>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Instructions" textFill="#42a8d7">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </Label>
+            <Region prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: &quot;lightgray&quot;;" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: &quot;lightgray&quot;;" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="CENTER" layoutX="470.0" layoutY="20.0" maxHeight="0.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="0.0" text="⬅" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Creating a Board">
+               <content>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Welcome to the SpeechBoards program!&#10;&#10;To create your first communication board, click on the &quot;Create a New Board&quot; button on the home page.&#10;&#10;In the &quot;Create a New Board&quot; screen, you will have to select the primary and secondary languages to be displayed on the communication board. For example, &quot;ENGLISH&quot; and &quot;SPANISH.&quot; If you do not wish to include a secondary language, you may select &quot;None&quot; for that box.&#10;&#10;Click the &quot;Create&quot; button to confirm your selection, and wait for the database of words to be translated. Now, you can select the checkboxes to display the desired words and images on the communication board. You cannot select more than 15 for each page, so if you want more images, you must export the current board and start a new board.&#10;&#10;When you are done creating the board, you can select the &quot;Export&quot; button to save it as a printable PDF.&#10;" wrapText="true">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextArea>
+                     </content></ScrollPane>
+               </content>
+            </Tab>
+          <Tab text="Uploading an Image">
+               <content>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Uploading an image is useful for customizing a communication board. For example, you may upload an image of a particular patient's child or spouse, making communication easier.&#10;&#10;To upload an image, navigate to the &quot;Create a New Board&quot; window and click the &quot;Upload an Image&quot; button at the bottom left. Enter the name that is to be displayed below the image (e.g. &quot;Robert&quot;) and the category that the image belongs to (e.g. &quot;People&quot;). You must also select the JPG image file from your computer.&#10;&#10;To remove an image from your personal library, you may simply delete the image from the folder labeled &quot;UploadedImages&quot; wherever you have downloaded SpeechBoards on your computer." wrapText="true">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextArea>
+                     </content></ScrollPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
